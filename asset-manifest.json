@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/alegria-live/bcs_test/static/css/main.e9936e47.chunk.css",
+    "main.js": "/alegria-live/bcs_test/static/js/main.dc643e90.chunk.js",
+    "main.js.map": "/alegria-live/bcs_test/static/js/main.dc643e90.chunk.js.map",
+    "runtime~main.js": "/alegria-live/bcs_test/static/js/runtime~main.92406d3a.js",
+    "runtime~main.js.map": "/alegria-live/bcs_test/static/js/runtime~main.92406d3a.js.map",
+    "static/js/2.7ad91dd1.chunk.js": "/alegria-live/bcs_test/static/js/2.7ad91dd1.chunk.js",
+    "static/js/2.7ad91dd1.chunk.js.map": "/alegria-live/bcs_test/static/js/2.7ad91dd1.chunk.js.map",
+    "index.html": "/alegria-live/bcs_test/index.html",
+    "precache-manifest.822f7899bea01afb6b084c91b7ee5599.js": "/alegria-live/bcs_test/precache-manifest.822f7899bea01afb6b084c91b7ee5599.js",
+    "service-worker.js": "/alegria-live/bcs_test/service-worker.js",
+    "static/css/main.e9936e47.chunk.css.map": "/alegria-live/bcs_test/static/css/main.e9936e47.chunk.css.map"
+  }
+}
