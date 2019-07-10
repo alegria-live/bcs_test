@@ -1,0 +1,22 @@
+.Detail {    
+    display: flex;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;
+    min-width: 38rem;
+}
+.Detail h1 {
+    padding: 4px 12px;
+    margin-left: 16px;
+    background-color: bisque;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.Detail img {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+}
+.Spec {
+    padding: 1rem;
+}
+.Spec h4 {
+    margin-bottom: 0;
+}

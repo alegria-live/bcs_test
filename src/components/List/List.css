@@ -1,0 +1,15 @@
+.List {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+    border-radius: 2px;
+    padding: 1rem 3rem;
+    overflow-y: auto;
+    
+}
+
+.List::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: bisque;
+}

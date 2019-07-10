@@ -1,11 +1,15 @@
 import React from 'react';
-import ListBuilder from '../../containers/List/ListBuilder';
+import classes from './Layout.css';
+import List from '../../components/List/List';
+import Detail from '../../containers/Detail/DetailBuilder';
 
 const Layout = () => {
     return(
-        <div>
-            <header>Header</header>
-            <ListBuilder />
+        <div className={classes.Layout}>
+                <List />
+            <div>
+                <Detail />               
+            </div>
         </div>
     );
 };

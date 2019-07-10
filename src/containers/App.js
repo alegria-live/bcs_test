@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../store/actions';
+import CharacterContext from '../context/character-context';
 import classes from './App.css';
 import Spinner from '../components/UI/Spinner/Spinner';
 import Layout from '../hoc/Layout/Layout';
@@ -11,10 +12,19 @@ const App = props => {
     props.autoInitListHandler()
     // eslint-disable-next-line
   }, []);
+
+  const [characterId, setCharacterId] = useState(1);
+  const setId = (id) => {
+    setCharacterId(id)
+  }
   
   return (
     <div className={classes.App} >
-      {props.isLoading ? <Spinner /> : <Layout />}
+      {props.isLoading ? <Spinner /> : 
+      <CharacterContext.Provider value={{characterId, setCharacterId: setId}}>
+        <Layout />
+      </CharacterContext.Provider>
+      }
     </div>
   );
 };
