@@ -1,8 +1,12 @@
 import React from 'react';
+import ListBuilder from '../../containers/List/ListBuilder';
 
 const Layout = () => {
     return(
-        <h2>Layout</h2>
+        <div>
+            <header>Header</header>
+            <ListBuilder />
+        </div>
     );
 };
 export default Layout;

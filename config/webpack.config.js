@@ -316,7 +316,7 @@ module.exports = function(webpackEnv) {
           include: paths.appSrc,
         },
         {
-          loader: 'babel-loader',
+          loader: require.resolve('babel-loader'),
           exclude: /node_modules/,
           test: /\.js$/,
           options: {           
@@ -336,11 +336,11 @@ module.exports = function(webpackEnv) {
             {
               test: /\.less$/,
                 use: [{
-                  loader: 'style-loader',
+                  loader: require.resolve('style-loader'),
                 }, {
-                  loader: 'css-loader', // translates CSS into CommonJS
+                  loader: require.resolve('css-loader'), // translates CSS into CommonJS
                 }, {
-                  loader: 'less-loader',
+                  loader: require.resolve('less-loader'),
                   options: {
                     javascriptEnabled: true
                   } // compiles Less to CSS

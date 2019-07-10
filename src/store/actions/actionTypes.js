@@ -1,0 +1,5 @@
+export const AUTO_INIT_LIST = 'AUTO_INIT_LIST'
+export const LIST_INIT = 'LIST_INIT'
+export const LIST_PROCESS = 'LIST_PROCESS'
+export const LIST_SUCCESS = 'LIST_SUCCESS'
+export const LIST_FAIL = 'LIST_FAIL'

@@ -2,7 +2,7 @@
   "name": "bcs_test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/alegria-live/bcs_test",
+  "homepage": "https://alegria-live.github.io/bcs_test",
   "dependencies": {
     "@babel/core": "7.4.3",
     "@svgr/webpack": "4.1.0",
@@ -145,6 +145,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "less": "^3.9.0"
   }
 }
