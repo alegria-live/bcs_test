@@ -5,11 +5,11 @@ import * as actions from "../actions";
 export function* listProcessSaga(action) {
     yield put(actions.listInit());
     try {
-        const response = yield axios.get(action.page);
+        const response = yield axios.get(action.page);        
         yield put(actions.listSuccess(response.data))
     }
     catch(error) {
-        yield put(actions.listFail(error));
+        yield put(actions.listFail(error.message));
     }
 }
 export function* autoInitListSaga() {

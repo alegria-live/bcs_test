@@ -4,10 +4,10 @@
     border: 1px solid rgba(0, 0, 0, 0.2); 
     border-radius: 5px;
     min-width: 38rem;
+    text-align: left;
 }
 .Detail h1 {
-    padding: 4px 12px;
-    margin-left: 16px;
+    padding: 4px 12px;   
     background-color: bisque;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -16,7 +16,9 @@
 }
 .Spec {
     padding: 1rem;
+    margin-left: 16px;    
 }
 .Spec h4 {
     margin-bottom: 0;
+    color: rgba(49, 49, 49, 0.5);
 }

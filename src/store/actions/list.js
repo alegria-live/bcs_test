@@ -10,10 +10,10 @@ export const listInit = () => {
         type: actionTypes.LIST_INIT
     };
 };
-export const listProcess = param => {
+export const listProcess = page => {
     return {
         type: actionTypes.LIST_PROCESS,
-        param
+        page
     };
 };
 export const listSuccess = data => {

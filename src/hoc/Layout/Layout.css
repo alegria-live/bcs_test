@@ -1,7 +1,6 @@
 .Layout {
-    margin: 0 auto;
+    margin: 7rem auto 0 auto;
     display: flex;
-    width: 80rem;
+    width: 70%;    
     justify-content: space-around;
-    margin-top: 2rem;
 }

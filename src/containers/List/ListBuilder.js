@@ -1,13 +1,14 @@
 import React, {useContext} from 'react';
 import {connect} from 'react-redux';
-import CharacterContext from '../../context/character-context';
+import AppContext from '../../context/app-context';
 import Card from '../../components/UI/Card/Card';
 import {Switch} from 'antd';
 
 const ListBuilder = props => {
-    const {characterId, setCharacterId} = useContext(CharacterContext);
+    const {characterId, setCharacterId} = useContext(AppContext);
+    
     const showDetails = (val) => {        
-        val = Number(val);        
+        val = Number(val);
         val === characterId ? setCharacterId(null) : setCharacterId(val)
     };    
     const avatarsArr = props.characters.map(character => {
@@ -17,7 +18,7 @@ const ListBuilder = props => {
             <Card
                 img={character.image}      
                 switch = {
-                    <Switch
+                    <Switch                        
                         id={character.id}
                         checked ={characterId === character.id }
                         onChange={(checked, event) => showDetails(event.target.id)}

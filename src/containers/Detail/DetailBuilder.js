@@ -1,12 +1,11 @@
 import React, {useContext} from 'react';
 import {connect} from 'react-redux';
-import CharacterContext from '../../context/character-context';
+import AppContext from '../../context/app-context';
 import Detail from '../../components/Detail/Detail';
 
 const DetailBuilder = props => {
-    const {characterId} = useContext(CharacterContext);
-    const character = props.characters[characterId-1]
-
+    const {characterId} = useContext(AppContext);
+    const character = props.characters.find(character => character.id === characterId) 
     return (
         !characterId || !props.loaded ? <Detail /> :
         <Detail
@@ -23,5 +22,5 @@ const mapStateToprops = state => {
         characters : state.listReducer.results,
         loaded: state.listReducer.loaded
     }
-}
+};
 export default connect(mapStateToprops)(DetailBuilder)

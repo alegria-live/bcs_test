@@ -27,7 +27,7 @@ const GraphBuilder = props => {
                 labels: {
                     trim: false,                    
                 },
-                categories: ["Male", "Female"]
+                categories: ["Male", "Female", "Unknown"]
             },
             theme: {
                 mode: 'light',
@@ -42,13 +42,16 @@ const GraphBuilder = props => {
         ]
     });
     const countGender = () => {
-        let male = 0;
-        let female = 0;
+        let male = 0,
+            female = 0,
+            unknown =0
+        
         props.characters.forEach(element => {            
             if(element.gender === 'Male') male++
             if(element.gender === 'Female') female++
+            if(element.gender === 'unknown') unknown++
         });
-        const newSeries = [male, female]
+        const newSeries = [male, female, unknown]
         const updatedSeries = [{
             ...chartData.series[0],
             data: newSeries
