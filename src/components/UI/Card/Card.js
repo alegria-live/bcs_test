@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Avatar } from 'antd';
 const { Meta } = Card;
 
-class CardComp extends React.Component {
+export class CardComp extends React.Component {
 
     render() {
         return (

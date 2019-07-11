@@ -40,5 +40,5 @@ const mapDispatchToProps = dispatch => {
     return {
         listProcessHandler: (page) => dispatch(actions.listProcess(page))
     }
-}
+};
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderBuilder)

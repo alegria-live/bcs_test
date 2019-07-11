@@ -5,7 +5,7 @@ import classes from './Detail.css';
 const Detail = props => (
     <Row >
         <Col span={24} className={classes.Detail} >
-            <img src={props.img} alt="" />
+            <img src={props.img} alt={props.name} />
             <div className={classes.Spec}>
                 <h1>Character details</h1>
                 <h4>Name:</h4>
@@ -17,8 +17,6 @@ const Detail = props => (
                 <h4>Gender:</h4>
                 <h3>{props.gender}</h3>
             </div>
-            
-            
         </Col>      
   </Row>
 );

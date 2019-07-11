@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import AppContext from '../../context/app-context';
 import Detail from '../../components/Detail/Detail';
 
-const DetailBuilder = props => {
+export const DetailBuilder = props => {
     const {characterId} = useContext(AppContext);
     const character = props.characters.find(character => character.id === characterId) 
     return (

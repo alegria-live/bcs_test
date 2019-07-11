@@ -4,8 +4,8 @@ import AppContext from '../../context/app-context';
 import Card from '../../components/UI/Card/Card';
 import {Switch} from 'antd';
 
-const ListBuilder = props => {
-    const {characterId, setCharacterId} = useContext(AppContext);
+export const ListBuilder = props => {
+    const {characterId, setCharacterId} = useContext(AppContext);    
     
     const showDetails = (val) => {        
         val = Number(val);
@@ -16,9 +16,9 @@ const ListBuilder = props => {
             key={character.id} 
             id={character.id}>
             <Card
-                img={character.image}      
+                img={character.image}
                 switch = {
-                    <Switch                        
+                    <Switch
                         id={character.id}
                         checked ={characterId === character.id }
                         onChange={(checked, event) => showDetails(event.target.id)}
@@ -27,7 +27,6 @@ const ListBuilder = props => {
             />
         </li>
     });
-
     return(
         <ul style={{listStyle: 'none', padding: 0}}>
             {avatarsArr}

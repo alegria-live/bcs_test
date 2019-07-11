@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Header.css';
 import { Button, Icon } from 'antd';
+
 const Header = props => (
     <div className={classes.Header}>
         <div>
@@ -15,11 +16,11 @@ const Header = props => (
                     <Icon type="left" />
                     Prev
                 </Button>
-                    <Button
-                        type="dashed"
-                        disabled={props.lastPage}
-                        onClick={() => props.changePage('next')}>
-                        Next
+                <Button
+                    type="dashed"
+                    disabled={props.lastPage}
+                    onClick={() => props.changePage('next')}>
+                    Next
                     <Icon type="right" />
                 </Button>
             </Button.Group>
@@ -31,9 +32,7 @@ const Header = props => (
             <span>{props.totalPages}</span>
             <span>Current page:</span>
             <span>{props.currentPage}</span>
-        </div>
-        
+        </div>        
     </div>
-
 );
 export default Header
