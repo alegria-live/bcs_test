@@ -7,7 +7,7 @@ export class CardComp extends React.Component {
     render() {
         return (
             <Card
-                style={{ width: 300, marginTop: 6 }}
+                style={{ width: 300, margin: '0.6rem 2.5rem 0 3rem'}}
                 bodyStyle={{ padding: 10 }}>
                 <Meta
                     avatar={

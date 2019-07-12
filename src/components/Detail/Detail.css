@@ -1,5 +1,5 @@
 .Detail {    
-    display: flex;
+    display: flex !important;
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.2); 
     border-radius: 5px;
@@ -13,6 +13,7 @@
 }
 .Detail img {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+    margin-left:1rem;
 }
 .Spec {
     padding: 1rem;

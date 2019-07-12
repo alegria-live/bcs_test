@@ -4,7 +4,7 @@ import classes from './Detail.css';
 
 const Detail = props => (
     <Row >
-        <Col span={24} className={classes.Detail} >
+        <Col span={24} className={classes.Detail} style={{display: 'flex'}}>
             <img src={props.img} alt={props.name} />
             <div className={classes.Spec}>
                 <h1>Character details</h1>
