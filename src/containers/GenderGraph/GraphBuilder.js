@@ -2,7 +2,7 @@ import React , {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import Chart from '../../components/UI/Charts/ApexChart';
 
-const GraphBuilder = props => {
+export const GraphBuilder = props => {
     const [chartData, setChartData] = useState({
         options: {            
             plotOptions: {
@@ -51,7 +51,7 @@ const GraphBuilder = props => {
             if(element.gender === 'Female') female++
             if(element.gender === 'unknown') unknown++
         });
-        const newSeries = [male, female, unknown]
+        const newSeries = [male,female,unknown]
         const updatedSeries = [{
             ...chartData.series[0],
             data: newSeries
@@ -61,8 +61,8 @@ const GraphBuilder = props => {
 
     useEffect(() => {
         if(props.loaded) countGender()
-    }, [])
-
+        // eslint-disable-next-line
+    }, [])    
     return(
         <Chart 
             options={chartData.options}

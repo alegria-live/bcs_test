@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {connect} from 'react-redux';
 import AppContext from '../../context/app-context';
-import * as actions from '../../store/actions'
+import * as actions from '../../store/actions';
 import Header from '../../components/Header/Header';
 
-const HeaderBuilder = props => {
+export const HeaderBuilder = props => {
     const {currentPage, setCurrentPage, setCharacterId} = useContext(AppContext);
     const onChangePage = (next, prev) => {
         if(next) {
@@ -17,8 +17,7 @@ const HeaderBuilder = props => {
             setCharacterId((currentPage - 1) * 20 - 19);
             setCurrentPage(currentPage -1);           
         };
-    };  
-    
+    };
     return (
         <Header 
             title="THE RICK AND MORTY API"

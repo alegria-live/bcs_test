@@ -1,13 +1,16 @@
 import React from 'react';
 import { Card, Avatar } from 'antd';
+import classes from './Card.css';
 const { Meta } = Card;
+const env = process.env.NODE_ENV === 'development';
 
 export class CardComp extends React.Component {
 
     render() {
         return (
             <Card
-                style={{ width: 300, margin: '0.6rem 2.5rem 0 3rem'}}
+                className={classes.Card}
+                style={!env ? { margin: '0.6rem 2.5rem 0 3rem'} : null}
                 bodyStyle={{ padding: 10 }}>
                 <Meta
                     avatar={

@@ -6,7 +6,7 @@ import classes from './App.css';
 import Spinner from '../components/UI/Spinner/Spinner';
 import Layout from '../hoc/Layout/Layout';
 
-const App = props => {
+export const App = props => {
   
   useEffect(()=> {
     props.autoInitListHandler()

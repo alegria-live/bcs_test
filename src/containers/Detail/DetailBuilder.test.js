@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure, shallow } from 'enzyme';
+import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { DetailBuilder } from './DetailBuilder';
 import Detail from '../../components/Detail/Detail';
@@ -13,26 +13,21 @@ describe('<DetailBuilder />', () => {
             image:"Test Image",
             name: "Test Name",
             species: "Test species",
-            location: "Test location",
+            location: {location: {name: "Test location Name"}},
             gender: "Test gender"
         }]
     const props = { characters : charactersArr, loaded: true }
+    const context = {characterId: 1};
     let wrapper;
     beforeEach(() => {
-        wrapper = shallow(<DetailBuilder {...props} />);
-    });    
-   
+        wrapper = mount(<DetailBuilder {...props} />, {context});
+    });
+    
     it('should render one element <Detail />' , () => {        
         expect(wrapper.find(Detail)).toHaveLength(1);
     });
-    it('should' , () => {
-        wrapper.setContext({characterId : 1});    
-        expect(wrapper.find({
-            img:'Test Image',
-            name:'Test Name',
-            species:'Test species',
-            location:'Test location',
-            gender:"Test gender"
-        })).toHaveLength(1);
-    }); 
+
+    it('should contains prop gender = undefined', ()=> {       
+        expect(wrapper.props().gender).toEqual(undefined);
+    });
 })
