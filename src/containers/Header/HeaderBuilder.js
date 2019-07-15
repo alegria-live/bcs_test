@@ -6,15 +6,16 @@ import Header from '../../components/Header/Header';
 
 export const HeaderBuilder = props => {
     const {currentPage, setCurrentPage, setCharacterId} = useContext(AppContext);
+    const maxWidth = window.innerWidth >= 992;
     const onChangePage = (next, prev) => {
         if(next) {
             props.listProcessHandler(`?page=${currentPage + 1}`);
-            setCharacterId((currentPage + 1) * 20 - 19);
-            setCurrentPage(currentPage +1);           
+            if (maxWidth) setCharacterId((currentPage + 1) * 20 - 19);
+            setCurrentPage(currentPage +1);
         };
         if(prev) {
             props.listProcessHandler(`?page=${currentPage - 1}`);
-            setCharacterId((currentPage - 1) * 20 - 19);
+            if (maxWidth) setCharacterId((currentPage - 1) * 20 - 19);
             setCurrentPage(currentPage -1);           
         };
     };

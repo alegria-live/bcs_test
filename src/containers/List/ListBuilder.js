@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {connect} from 'react-redux';
 import AppContext from '../../context/app-context';
 import Card from '../../components/UI/Card/Card';

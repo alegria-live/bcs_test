@@ -3,8 +3,7 @@ import { Row, Col, Drawer } from 'antd';
 
 import classes from './Detail.css';
 const env = process.env.NODE_ENV === 'development';
-const Detail = props => {
-   
+const Detail = props => {   
     const detailData = (
         <React.Fragment>
             <img src={props.img} alt={props.name} style={!env ? {marginLeft: '1rem'} : null}/>
@@ -21,7 +20,6 @@ const Detail = props => {
             </div>
         </React.Fragment>        
     );
-
     const detailDrawer = (
         <Drawer className={classes.ShowDrawer}
           height='80%'         

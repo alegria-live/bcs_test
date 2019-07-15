@@ -10,10 +10,7 @@ export const DetailBuilder = props => {
     const onCloseDrawer = () => {        
         setShowDrawer(false);
         setCharacterId(null);
-        
-    }
-    console.log(showDrawer);    
-
+    }   
     return (
         !characterId || !props.loaded ? <Detail /> :
         <Detail
