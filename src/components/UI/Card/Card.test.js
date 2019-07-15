@@ -19,8 +19,8 @@ describe('<CardComp />', () => {
     it('should render one <Mata /> element', () => {
         expect(wrapper.find(Meta)).toHaveLength(1);
     });
-    it('should render one <Avatar /> element', () => {
-        expect(wrapper.find(Avatar)).toHaveLength(1);
+    it('should render two <Avatar /> elements', () => {
+        expect(wrapper.find(Avatar)).toHaveLength(2);
     });
     it('should find element with title="Show details"', () => {
         expect(wrapper.find({title: "Show details"})).toHaveLength(1);

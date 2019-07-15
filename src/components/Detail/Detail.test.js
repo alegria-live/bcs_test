@@ -16,6 +16,6 @@ describe('<Detail />', () => {
     });
     it('should contains src="https://img.com"', () => {
         wrapper.setProps({img: "https://img.com"});
-        expect(wrapper.find({src:"https://img.com"})).toHaveLength(1);
+        expect(wrapper.find({src:"https://img.com"})).toHaveLength(2);
     });
 });
