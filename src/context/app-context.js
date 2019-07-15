@@ -3,6 +3,8 @@ const appContext = React.createContext({
     characterId: null,
     setCharacterId: () => {},
     currentPage: null,
-    setCurrentPage: () => {}
+    setCurrentPage: () => {},
+    showDrawer: false,
+    setShowDrawer: () => {}
 });
 export default appContext;

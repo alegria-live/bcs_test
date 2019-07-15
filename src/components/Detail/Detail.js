@@ -1,10 +1,12 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Drawer } from 'antd';
+
 import classes from './Detail.css';
 const env = process.env.NODE_ENV === 'development';
-const Detail = props => (
-    <Row >
-        <Col span={24} className={classes.Detail} style={{display: 'flex'}}>
+const Detail = props => {
+   
+    const detailData = (
+        <React.Fragment>
             <img src={props.img} alt={props.name} style={!env ? {marginLeft: '1rem'} : null}/>
             <div className={classes.Spec}>
                 <h1>Character details</h1>
@@ -17,8 +19,30 @@ const Detail = props => (
                 <h4>Gender:</h4>
                 <h3>{props.gender}</h3>
             </div>
+        </React.Fragment>        
+    );
+
+    const detailDrawer = (
+        <Drawer className={classes.ShowDrawer}
+          height='80%'         
+          placement="bottom"
+          closable={false}
+          onClose={props.onClose}
+          visible={props.showDrawer || props.showDrawer !== undefined}
+          >
+            <div className={classes.Drawer}>
+                {detailData}  
+            </div>        
+        </Drawer>
+    );
+    return (
+        <Row >
+        <Col span={24} className={classes.Detail} style={{display: 'flex'}}>
+            {detailDrawer}
+            {detailData}
         </Col>      
   </Row>
-);
+    )
+}
 
 export default Detail

@@ -5,8 +5,14 @@ import Detail from '../../components/Detail/Detail';
 import PropTypes from 'prop-types';
 
 export const DetailBuilder = props => {
-    const {characterId} = useContext(AppContext);
+    const {characterId, setCharacterId, showDrawer, setShowDrawer} = useContext(AppContext);  
     const character = props.characters.find(character => character.id === characterId);
+    const onCloseDrawer = () => {        
+        setShowDrawer(false);
+        setCharacterId(null);
+        
+    }
+    console.log(showDrawer);    
 
     return (
         !characterId || !props.loaded ? <Detail /> :
@@ -15,7 +21,9 @@ export const DetailBuilder = props => {
         name={character.name}
         species={character.species}
         location={character.location.name}
-        gender={character.gender}
+        gender={character.gender}        
+        onClose={onCloseDrawer}
+        showDrawer={showDrawer}
         />
     )
 };

@@ -14,8 +14,8 @@ describe('<Detail />', () => {
         wrapper.setProps({name: 'Rick Sanchez'});
         expect(wrapper.contains(<h3>Rick Sanchez</h3>)).toEqual(true);
     });
-    it('should contains <img src="https://img.com" alt="Rick Sanchez" ', () => {
-        wrapper.setProps({name: 'Rick Sanchez', img: "https://img.com"});
-        expect(wrapper.contains(<img src='https://img.com' alt='Rick Sanchez' />)).toEqual(true);
+    it('should contains src="https://img.com"', () => {
+        wrapper.setProps({img: "https://img.com"});
+        expect(wrapper.find({src:"https://img.com"})).toHaveLength(1);
     });
 });

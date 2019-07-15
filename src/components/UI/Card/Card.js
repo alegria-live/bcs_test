@@ -11,10 +11,13 @@ export class CardComp extends React.Component {
             <Card
                 className={classes.Card}
                 style={!env ? { margin: '0.6rem 2.5rem 0 3rem'} : null}
-                bodyStyle={{ padding: 10 }}>
-                <Meta
+                bodyStyle={{ padding: 10 }}
+                cover={
+                    <Avatar shape="square" size={54} src={this.props.img} className={classes.Cover}/>
+                }>
+                <Meta className={classes.Meta}
                     avatar={
-                        <Avatar shape="square" size={54} src={this.props.img} />
+                        <Avatar shape="square" size={54} src={this.props.img} className={classes.Avatar}/>
                     }
                     title="Show details"
                     description={this.props.switch}

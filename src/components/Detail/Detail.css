@@ -22,3 +22,28 @@
     margin-bottom: 0;
     color: rgba(49, 49, 49, 0.5);
 }
+.Drawer {   
+    margin: 0 auto;
+    display: block;
+    height: 80vh;
+    text-align: center;    
+}
+.Drawer .Spec {
+    margin: 0;   
+}
+.Drawer img {
+    height: 140px;
+    width: 140px;
+}
+.ShowDrawer {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .Detail {
+        display: none !important;
+    }
+    .ShowDrawer {
+        display: block;
+    }
+}

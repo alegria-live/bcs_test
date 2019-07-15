@@ -6,3 +6,9 @@
     width: 70%;    
     justify-content: space-around;
 }
+@media (max-width: 992px) {
+    .Layout {
+       display: block;
+       top: 14rem;
+    }
+} 

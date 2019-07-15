@@ -28,3 +28,14 @@
     border-radius: 5px;
     background-color: rgba(161, 86, 51, 0.3)	
 }
+
+@media (max-width: 992px) {
+    .List {
+       height: 80vh;
+    }
+}
+@media (max-width: 500px) {
+    .List {
+       padding: 0.4rem;
+    }
+}

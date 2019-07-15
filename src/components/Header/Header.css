@@ -14,3 +14,12 @@
 .Header span {
     padding-right: 0.5rem;
 }
+
+@media (max-width: 992px) {
+    .Header {
+        display: block;
+    }
+    .Header div {
+        margin: 0.5rem 0;
+    }       
+}

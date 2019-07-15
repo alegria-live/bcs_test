@@ -12,17 +12,19 @@ export const App = props => {
     props.autoInitListHandler()
     // eslint-disable-next-line
   }, []);
+  const ScreenWidth = window.innerWidth;
+  let startId = 1;
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [characterId, setCharacterId] = useState(1);
-
-  const setId = (id) => {
-    setCharacterId(id)
-  };
-  const setPage = (page) => {
-    setCurrentPage(page)
-  };
+  if(ScreenWidth <= 992) startId = null;
   
+  const [currentPage, setCurrentPage] = useState(1);
+  const [characterId, setCharacterId] = useState(startId);
+  const [showDrawer, setShowDrawer] = useState(false)
+
+  const setId = (id) => setCharacterId(id);
+  const setPage = (page) => setCurrentPage(page);
+  const setDrawer = (val) => setShowDrawer(val);
+    
   return (
     <div className={classes.App} >
       {props.isLoading ? <Spinner /> : 
@@ -30,7 +32,9 @@ export const App = props => {
         characterId,
         setCharacterId: setId,
         currentPage,
-        setCurrentPage: setPage
+        setCurrentPage: setPage,
+        showDrawer,
+        setShowDrawer: setDrawer
         }}>
         <Layout />
       </AppContext.Provider>

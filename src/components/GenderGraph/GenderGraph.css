@@ -5,3 +5,10 @@
     min-width: 38rem;
     margin-top: 2rem;
 }
+
+@media (max-width: 992px) {
+    .GenderGraph {
+        margin: 2rem auto;
+        min-width: auto;
+    }
+}
